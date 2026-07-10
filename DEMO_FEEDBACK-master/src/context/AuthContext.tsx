@@ -4,7 +4,7 @@ import { User, AuthContextType } from '../types';
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Backend API URL
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://feedback-survey-system-i3ty.onrender.com/api';
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -156,8 +156,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     } catch (error) {
       // Normalize fetch/timeout errors into user-friendly messages.
       if (error instanceof DOMException && error.name === 'AbortError') {
-        throw new Error('Registration timed out. Check backend on http://localhost:5000/api/auth/register');
-      }
+    throw new Error('Registration timed out. Check backend on https://feedback-survey-system-i3ty.onrender.com/api/auth/register');
+}
 
       if (error instanceof Error) {
         throw error;
