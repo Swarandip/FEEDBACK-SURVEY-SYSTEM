@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/FEEDBACK-SURVEY-SYSTEM/',
   optimizeDeps: {
-    include: ['lucide-react'], // Include lucide-react for optimization
+    include: ['lucide-react'],
   },
 });
