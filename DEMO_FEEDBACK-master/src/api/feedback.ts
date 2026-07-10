@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://feedback-survey-system-i3ty.onrender.com/api';
 
 export interface ApiQuestion {
   _id: string;
