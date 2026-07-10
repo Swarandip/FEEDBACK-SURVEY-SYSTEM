@@ -29,7 +29,10 @@ async function seedDefaultAdmin() {
 
 async function connectDB() {
   try {
+    console.log("Connecting to:", MONGODB_URI);
+
     await mongoose.connect(MONGODB_URI);
+
     console.log('✅ MongoDB connected successfully!');
 
     await seedDefaultAdmin();
